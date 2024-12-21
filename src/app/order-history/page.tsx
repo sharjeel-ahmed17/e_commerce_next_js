@@ -11,7 +11,7 @@ export default function OrderHistoryPage() {
       <div>
         <h1 className="text-3xl font-bold mb-6">Order History</h1>
         {orders.length === 0 ? (
-          <p>You haven't placed any orders yet.</p>
+        <p>You haven&apos;t placed any orders yet.</p>
         ) : (
           <div className="space-y-8">
             {orders.map(order => (

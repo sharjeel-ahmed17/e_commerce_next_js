@@ -29,8 +29,12 @@ export default function LoginPage() {
       const data = await response.json()
       login(data)
       router.push('/profile')
-    } catch (err) {
-      setError('Invalid username or password')
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error(error.message);
+      }
+      setError('Invalid username or password');
+      // console.log();
     }
   }
 

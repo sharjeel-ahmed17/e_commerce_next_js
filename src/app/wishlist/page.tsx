@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { Product } from '../types'
+// import { useState, useEffect } from 'react'
+// import Link from 'next/link'
+// import { Product } from '../types'
 import AddToCartButton from '../components/AddToCartButton'
 import { useShoppingContext } from '../contexts/ShoppingContext'
 
@@ -15,10 +15,13 @@ export default function WishlistPage() {
   // }, [])
 
   const removeItem = (id: number) => {
-    const updatedWishlist = wishlistItems.filter(item => item.id !== id)
+    // const updatedWishlist = wishlistItems.filter(item => item.id !== id)
     // setWishlistItems(updatedWishlist)
     // localStorage.setItem('wishlist', JSON.stringify(updatedWishlist))
-    toggleWishlist(id, false)
+    const itemToRemove = wishlistItems.find(item => item.id === id);
+    if (itemToRemove) {
+      toggleWishlist(itemToRemove);
+    }
   }
 
   return (
@@ -51,4 +54,5 @@ export default function WishlistPage() {
     </div>
   )
 }
+
 

@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { CartItem } from '../types'
+// import { CartItem } from '../types'
 import { Plus, Minus } from 'lucide-react'
 import { useShoppingContext } from '../contexts/ShoppingContext'
 
